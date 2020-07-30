@@ -1,14 +1,5 @@
 const fetch = require("node-fetch");
 
-const requestOne = async (urls) => {
-  return fetch(urls[0])
-    .then((response) => {
-      console.log(response);
-      return response;
-    })
-    .catch((err) => console.log("fetch failed", err));
-};
-
 const requestMutliple = async (urls) => {
   const promises = urls.map((url) => {
     return fetch(url);
