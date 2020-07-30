@@ -1,0 +1,17 @@
+{
+  "name": "request-multiple",
+  "version": "1.0.0",
+  "description": "Package to request JSON data from an array of URLs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Alistair Colling",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.2.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
