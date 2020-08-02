@@ -1,13 +1,14 @@
 const fetch = require("node-fetch");
 
-const requestPromises = (promises) => {
-  const promise = promises.shift();
-  promise.then;
+const anAsyncFunction = async (url) => {
+  const result = await fetch(url)
+    .then((data) => data.text())
+    .then((parsed) => parsed);
+  return result;
 };
 
 const requestMutliple = async (urls) => {
-  const result = await fetch(urls[0]).then((result) => result.text());
-  return result;
+  return Promise.all(urls.map((url) => anAsyncFunction(url)));
 };
 //   const promises = urls.map((url) => {
 //     return fetch(url);

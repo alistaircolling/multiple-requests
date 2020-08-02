@@ -12,6 +12,5 @@ const urls = [
 
 test("hello", async () => {
   const result = await requestMutliple(urls);
-  console.log(result);
   expect(result).toBe(2);
 });
